@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// This is MotionController 
 
 public class MotionController : MonoBehaviour {
 	public float speedFactor = 0.1f;
