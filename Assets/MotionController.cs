@@ -35,16 +35,9 @@ public class MotionController : MonoBehaviour
 			Renderer renderWall = contactPoint.otherCollider.GetComponent<Renderer>();
 			Renderer renderSphere = contactPoint.thisCollider.gameObject.GetComponent<Renderer>();
 
-//			print ("change color");
-			renderSphere.material.color = Color.Lerp(renderSphere.material.color, renderWall.material.color, additionalColorPercent);
+			renderSphere.material = renderWall.material;
+			contactPoint = new ContactPoint();
 
-
-
-			// if the color is the same, stop changing and set contactPoint = null
-			if(renderWall.material.color == renderSphere.material.color){
-				contactPoint = new ContactPoint();
-//				print ("color changed");
-			}
 		}
 
 		 
